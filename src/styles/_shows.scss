@@ -16,11 +16,20 @@
 
         &--is-active{
             display: grid;
+            @media (max-width:768px){
+                display: block;
+                img{
+                    margin: 16px 0px;
+                    min-width: 100%;
+                }
+            }
         }
 
         &__item{
             img{
                 max-width: 100%;
+                min-height: 202px;
+                max-height: 202px;
                 border-radius: 4px;
             }
         }

@@ -9,13 +9,13 @@
 
 
 @font-face{
-    font-family: Avenir;
-    src: url(../../assets/fonts/Avenir-Regular.woff2);
+    font-family: Minecraft;
+    src: url(../../assets/fonts/Minecraft.ttf);
     font-weight: 400;
 }
 @font-face{
-    font-family: Avenir;
-    src: url(../../assets/fonts/Avenir-Bold.woff2);
+    font-family: Minecraft;
+    src: url(../../assets/fonts/Minecraft.ttf);
     font-weight: 700;
 }
 
@@ -23,14 +23,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Avenir, sans-serif;
+    font-family: Minecraft, sans-serif;
     list-style: none;
 
 }
 
 body{
     background-color: variaveis.$corDeFundo;
-    font-family: Avenir,sans-serif;
+    font-family: Minecraft,sans-serif;
 }
 
 @mixin text($fontSize : 16px){
@@ -43,6 +43,7 @@ body{
     @include text($fontSize);
     color: variaveis.$corTextoSecundaria;
 }
+
 
 .text--big{
     @include text(18px);
@@ -93,10 +94,11 @@ body{
     }
 }
 
+
 .link-text {
 @include text(18px);
 color: variaveis.$corTextoSecundaria;
-text-decoration: underline;
+text-decoration: none;
 }
 
 .button{
@@ -142,8 +144,10 @@ text-decoration: underline;
 .image-text-section {
     padding: 5.6vw;
     display: grid;
+    gap: 16px;
     grid-template-columns: 1fr 1fr;
     align-items: center;
+    
 
     @media (max-width:768px){
         display: block;
@@ -184,9 +188,17 @@ text-decoration: underline;
                 position: relative;
                 left: 0;
                 width: 100%;
+                
             }
         }
     }
+}
 
-
+.border{
+    color: white;
+    text-shadow:
+    -2px -2px 0 black,
+    2px -2px 0 black,
+    -2px  2px 0 black,
+    2px  2px 0 black;
 }
